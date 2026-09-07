@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.5"
+  >
+
+  <title>My Day, Step by Step</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top">
+
+      <h1>My Day, Step by Step</h1>
+
+      <button
+        class="icon-btn"
+        id="editBtn"
+        aria-label="Edit routine"
+      >
+        Edit
+      </button>
+
+    </header>
+
+    <p class="subtitle">
+      A gentle memory game about your everyday routine.
+    </p>
+
+
+    <!-- ================= HOME SCREEN ================= -->
+
+    <section id="homeScreen">
+
+      <div class="home-card">
+
+        <h2>Today's Routine</h2>
+
+        <ul
+          class="routine-preview"
+          id="routinePreview"
+        ></ul>
+
+
+        <!-- Start Game -->
+
+        <button
+          class="start-btn"
+          id="startBtn"
+        >
+          Start the Game
+        </button>
+
+
+        <!-- Read Routine -->
+
+        <button
+          class="ghost-btn"
+          id="listenAllBtn"
+        >
+          🔊 Read the Whole Routine Aloud
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= GAME SCREEN ================= -->
+
+    <section
+      id="gameScreen"
+      class="hidden"
+    >
+
+      <!-- Progress -->
+
+      <div
+        class="progress-row"
+        id="progressRow"
+      ></div>
+
+
+      <!-- Current Step -->
+
+      <div class="current-step">
+
+        <span
+          class="emoji"
+          id="stepEmoji"
+        >
+          ☀️
+        </span>
+
+        <p class="label">
+          You just finished:
+        </p>
+
+        <p
+          class="name"
+          id="stepName"
+        >
+          Waking up
+        </p>
+
+
+        <!-- Read Current Step -->
+
+        <button
+          class="speak-btn"
+          id="speakStepBtn"
+        >
+          🔊 Hear this step
+        </button>
+
+      </div>
+
+
+      <!-- Question -->
+
+      <p class="prompt">
+        What comes next?
+      </p>
+
+
+      <!-- Answer Options -->
+
+      <div
+        class="options"
+        id="optionsWrap"
+      ></div>
+
+
+      <!-- Feedback -->
+
+      <p
+        class="feedback"
+        id="feedback"
+        aria-live="polite"
+      ></p>
+
+
+      <!-- Continue -->
+
+      <button
+        class="next-btn hidden"
+        id="nextBtn"
+      >
+        Continue
+      </button>
+
+    </section>
+
+
+    <!-- ================= END SCREEN ================= -->
+
+    <section
+      id="endScreen"
+      class="hidden"
+    >
+
+      <div class="end-card">
+
+        <span class="emoji">
+          🌙
+        </span>
+
+        <h2>
+          You finished the whole day!
+        </h2>
+
+        <div
+          class="stars"
+          id="starsDisplay"
+        ></div>
+
+        <p id="endMessage">
+          Every step you remembered counts.
+          Well done.
+        </p>
+
+
+        <!-- Play Again -->
+
+        <button
+          class="start-btn"
+          id="playAgainBtn"
+        >
+          Play Again
+        </button>
+
+
+        <!-- Back Home -->
+
+        <button
+          class="ghost-btn"
+          id="homeFromEndBtn"
+        >
+          Back to Today's Routine
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= EDIT SCREEN ================= -->
+
+    <section
+      id="editScreen"
+      class="hidden"
+    >
+
+      <button
+        class="back-link"
+        id="cancelEditBtn"
+      >
+        ← Back
+      </button>
+
+      <h2>
+        Edit Today's Routine
+      </h2>
+
+      <p class="subtitle">
+        Put the steps of the day in order,
+        from morning to night.
+      </p>
+
+
+      <!-- Editor rows -->
+
+      <div id="editorList"></div>
+
+
+      <!-- Add -->
+
+      <button
+        class="add-row-btn"
+        id="addRowBtn"
+      >
+        + Add a Step
+      </button>
+
+
+      <!-- Save -->
+
+      <button
+        class="save-btn"
+        id="saveEditBtn"
+      >
+        Save Routine
+      </button>
+
+    </section>
+
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>

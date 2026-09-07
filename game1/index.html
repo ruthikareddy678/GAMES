@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Picture Sorting Game</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <div class="app">
+
+    <h1>Picture Sorting Game</h1>
+
+    <div id="loading">
+      Loading your high score…
+    </div>
+
+    <!-- SCORE -->
+
+    <div class="stats">
+
+      <div class="stat">
+        <div class="label">⭐ Score</div>
+        <div class="value" id="score">0</div>
+      </div>
+
+      <div class="stat">
+        <div class="label">🎯 Round</div>
+        <div class="value" id="round">1/10</div>
+      </div>
+
+      <div class="stat">
+        <div class="label">🏆 Best</div>
+        <div class="value best" id="best">0</div>
+      </div>
+
+    </div>
+
+
+    <!-- PICTURE -->
+
+    <div id="stage">
+
+      <div id="item-icon"></div>
+
+      <div id="item-name"></div>
+
+    </div>
+
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="cats">
+
+      <button
+        data-cat="fruit"
+        class="catbtn">
+      </button>
+
+      <button
+        data-cat="animal"
+        class="catbtn">
+      </button>
+
+      <button
+        data-cat="clothes"
+        class="catbtn">
+      </button>
+
+    </div>
+
+
+    <!-- FEEDBACK -->
+
+    <div id="feedback"></div>
+
+
+    <!-- GAME OVER -->
+
+    <div id="gameover">
+
+      <p id="finalline"></p>
+
+      <div
+        class="newbest"
+        id="newbestline"
+        style="display:none;">
+        🏆 New high score!
+      </div>
+
+      <button
+        class="primary"
+        id="restart">
+        ▶ Play Again
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

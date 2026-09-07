@@ -1,0 +1,890 @@
+/* =========================================================
+   COLORS
+   ========================================================= */
+
+:root {
+
+  --paper: #F7F3E7;
+
+  --card: #FFFFFF;
+
+  --ink: #23302A;
+
+  --ink-soft: #4A5850;
+
+  --forest: #35695A;
+
+  --forest-dark: #24493E;
+
+  --amber: #D98E3F;
+
+  --amber-soft: #F5E1C0;
+
+  --sky: #DCE8E3;
+
+  --line: #D9D2BF;
+
+  --focus: #1E5FAE;
+}
+
+
+/* =========================================================
+   GENERAL
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+
+html,
+body {
+
+  margin: 0;
+
+  padding: 0;
+
+  background: var(--paper);
+
+  color: var(--ink);
+
+  font-family:
+    'Atkinson Hyperlegible',
+    sans-serif;
+
+  font-size: 20px;
+
+  line-height: 1.45;
+}
+
+
+body {
+  min-height: 100vh;
+}
+
+
+h1,
+h2,
+h3 {
+
+  font-family:
+    'Fredoka',
+    'Atkinson Hyperlegible',
+    sans-serif;
+
+  font-weight: 600;
+
+  color: var(--forest-dark);
+}
+
+
+button {
+
+  font-family: inherit;
+
+  cursor: pointer;
+}
+
+
+button:focus-visible {
+
+  outline:
+    3px solid var(--focus);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.wrap {
+
+  width: 100%;
+
+  max-width: 640px;
+
+  margin: 0 auto;
+
+  padding:
+    24px
+    20px
+    60px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header.top {
+
+  display: flex;
+
+  align-items: baseline;
+
+  justify-content: space-between;
+
+  gap: 12px;
+
+  margin-bottom: 6px;
+}
+
+
+header.top h1 {
+
+  font-size: 1.7rem;
+
+  margin: 0;
+}
+
+
+.icon-btn {
+
+  background: var(--card);
+
+  border:
+    2px solid
+    var(--line);
+
+  border-radius: 14px;
+
+  padding:
+    10px
+    14px;
+
+  font-size: 1rem;
+
+  color: var(--forest-dark);
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.subtitle {
+
+  color: var(--ink-soft);
+
+  margin:
+    0
+    0
+    24px;
+
+  font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   HOME CARD
+   ========================================================= */
+
+.home-card {
+
+  background: var(--card);
+
+  border-radius: 22px;
+
+  padding:
+    28px
+    24px;
+
+  box-shadow:
+    0
+    2px
+    0
+    var(--line);
+}
+
+
+.home-card h2 {
+
+  margin-top: 0;
+}
+
+
+/* =========================================================
+   START BUTTON
+   ========================================================= */
+
+.start-btn {
+
+  display: block;
+
+  width: 100%;
+
+  background: var(--forest);
+
+  color: white;
+
+  border: none;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  font-size: 1.3rem;
+
+  font-weight: 600;
+
+  font-family: 'Fredoka', sans-serif;
+
+  margin:
+    18px
+    0
+    10px;
+}
+
+
+.start-btn:hover {
+
+  background: var(--forest-dark);
+}
+
+
+.start-btn:active {
+
+  background: var(--forest-dark);
+
+  transform: scale(0.99);
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+   ========================================================= */
+
+.ghost-btn {
+
+  display: block;
+
+  width: 100%;
+
+  background: transparent;
+
+  color: var(--forest-dark);
+
+  border:
+    2px solid
+    var(--line);
+
+  border-radius: 18px;
+
+  padding: 16px;
+
+  font-size: 1.05rem;
+
+  font-weight: 600;
+}
+
+
+.ghost-btn:hover {
+
+  background: var(--sky);
+}
+
+
+/* =========================================================
+   ROUTINE PREVIEW
+   ========================================================= */
+
+.routine-preview {
+
+  list-style: none;
+
+  padding: 0;
+
+  margin:
+    18px
+    0;
+}
+
+
+.routine-preview li {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 10px 0;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+  font-size: 1.1rem;
+}
+
+
+.routine-preview li:last-child {
+
+  border-bottom: none;
+}
+
+
+.routine-preview .num {
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: var(--sky);
+
+  color: var(--forest-dark);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   EMOJI
+   ========================================================= */
+
+.emoji {
+
+  font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   GAME PROGRESS
+   ========================================================= */
+
+.progress-row {
+
+  display: flex;
+
+  gap: 6px;
+
+  margin:
+    4px
+    0
+    26px;
+}
+
+
+.progress-dot {
+
+  height: 8px;
+
+  flex: 1;
+
+  border-radius: 4px;
+
+  background: var(--line);
+}
+
+
+.progress-dot.done {
+
+  background: var(--forest);
+}
+
+
+.progress-dot.current {
+
+  background: var(--amber);
+}
+
+
+/* =========================================================
+   CURRENT STEP
+   ========================================================= */
+
+.current-step {
+
+  background: var(--card);
+
+  border-radius: 22px;
+
+  padding:
+    26px
+    22px;
+
+  text-align: center;
+
+  margin-bottom: 22px;
+}
+
+
+.current-step .emoji {
+
+  font-size: 3rem;
+
+  display: block;
+
+  margin-bottom: 8px;
+}
+
+
+.current-step .label {
+
+  font-size: 0.95rem;
+
+  color: var(--ink-soft);
+
+  margin:
+    0
+    0
+    4px;
+}
+
+
+.current-step .name {
+
+  font-size: 1.5rem;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   SPEAK BUTTON
+   ========================================================= */
+
+.speak-btn {
+
+  margin-top: 14px;
+
+  background: var(--sky);
+
+  border: none;
+
+  border-radius: 14px;
+
+  padding:
+    10px
+    18px;
+
+  font-size: 0.95rem;
+
+  color: var(--forest-dark);
+
+  font-weight: 700;
+}
+
+
+.speak-btn:hover {
+
+  background: #cbded7;
+}
+
+
+/* =========================================================
+   QUESTION
+   ========================================================= */
+
+.prompt {
+
+  text-align: center;
+
+  font-size: 1.15rem;
+
+  margin:
+    0
+    0
+    18px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   OPTIONS
+   ========================================================= */
+
+.options {
+
+  display: grid;
+
+  gap: 14px;
+}
+
+
+.option-btn {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  background: var(--card);
+
+  border:
+    3px solid
+    var(--line);
+
+  border-radius: 20px;
+
+  padding: 18px;
+
+  text-align: left;
+
+  font-size: 1.2rem;
+
+  color: var(--ink);
+
+  min-height: 76px;
+}
+
+
+.option-btn .emoji {
+
+  font-size: 2rem;
+}
+
+
+.option-btn:hover {
+
+  border-color: var(--forest);
+}
+
+
+.option-btn:active {
+
+  transform: scale(0.99);
+}
+
+
+/* Correct answer */
+
+.option-btn.correct {
+
+  border-color: var(--forest);
+
+  background: #EAF3EE;
+}
+
+
+/* Gentle correction */
+
+.option-btn.gentle-nudge {
+
+  border-color: var(--amber);
+
+  background: var(--amber-soft);
+}
+
+
+.option-btn:disabled {
+
+  opacity: 1;
+
+  cursor: default;
+}
+
+
+/* =========================================================
+   FEEDBACK
+   ========================================================= */
+
+.feedback {
+
+  min-height: 34px;
+
+  text-align: center;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  margin-top: 18px;
+
+  color: var(--forest-dark);
+}
+
+
+/* =========================================================
+   NEXT BUTTON
+   ========================================================= */
+
+.next-btn {
+
+  display: block;
+
+  margin:
+    18px
+    auto
+    0;
+
+  background: var(--forest);
+
+  color: white;
+
+  border: none;
+
+  border-radius: 16px;
+
+  padding:
+    16px
+    34px;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  font-family: 'Fredoka', sans-serif;
+}
+
+
+/* =========================================================
+   END SCREEN
+   ========================================================= */
+
+.end-card {
+
+  background: var(--card);
+
+  border-radius: 22px;
+
+  padding:
+    32px
+    24px;
+
+  text-align: center;
+}
+
+
+.end-card .emoji {
+
+  font-size: 3.2rem;
+
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+
+.stars {
+
+  font-size: 1.8rem;
+
+  letter-spacing: 6px;
+
+  margin:
+    10px
+    0
+    18px;
+}
+
+
+/* =========================================================
+   EDITOR
+   ========================================================= */
+
+.editor-row {
+
+  display: flex;
+
+  gap: 10px;
+
+  align-items: center;
+
+  background: var(--card);
+
+  border:
+    2px solid
+    var(--line);
+
+  border-radius: 16px;
+
+  padding: 12px;
+
+  margin-bottom: 10px;
+}
+
+
+.editor-row select {
+
+  font-size: 1.6rem;
+
+  border: none;
+
+  background: transparent;
+}
+
+
+.editor-row input[type="text"] {
+
+  flex: 1;
+
+  font-family: inherit;
+
+  font-size: 1.05rem;
+
+  border: none;
+
+  background: transparent;
+
+  color: var(--ink);
+
+  min-width: 0;
+}
+
+
+.editor-row input[type="text"]:focus {
+
+  outline: none;
+}
+
+
+.remove-row {
+
+  background: transparent;
+
+  border: none;
+
+  color: #a15b3f;
+
+  font-size: 1.2rem;
+
+  padding:
+    4px
+    8px;
+}
+
+
+/* =========================================================
+   ADD BUTTON
+   ========================================================= */
+
+.add-row-btn {
+
+  width: 100%;
+
+  background: var(--sky);
+
+  border: none;
+
+  border-radius: 14px;
+
+  padding: 14px;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  color: var(--forest-dark);
+
+  margin:
+    8px
+    0
+    20px;
+}
+
+
+/* =========================================================
+   SAVE BUTTON
+   ========================================================= */
+
+.save-btn {
+
+  width: 100%;
+
+  background: var(--forest);
+
+  color: white;
+
+  border: none;
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  font-family: 'Fredoka', sans-serif;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+   ========================================================= */
+
+.back-link {
+
+  background: none;
+
+  border: none;
+
+  color: var(--forest-dark);
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  padding:
+    6px
+    0;
+
+  margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   HIDDEN
+   ========================================================= */
+
+.hidden {
+
+  display: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  html,
+  body {
+
+    font-size: 18px;
+  }
+
+  .wrap {
+
+    padding:
+      18px
+      14px
+      40px;
+  }
+
+  header.top h1 {
+
+    font-size: 1.45rem;
+  }
+
+  .home-card {
+
+    padding:
+      22px
+      18px;
+  }
+
+  .option-btn {
+
+    font-size: 1.05rem;
+
+    padding: 15px;
+  }
+
+}
